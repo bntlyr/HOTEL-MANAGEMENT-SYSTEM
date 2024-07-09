@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost/hotel/index.php -->
+<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodwill Hotel</title>
+    <link rel="shortcut icon" href="http://localhost/hotel/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./Goodwill Hotel_files/style.css">
+</head>
+<body>
+    <form action="http://localhost/hotel/booking.php" method="post">   
+        <!-- header included -->
+        <header>
+    <div class="logo">
+        <img src="./Goodwill Hotel_files/logo.svg" alt="site logo">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="http://localhost/hotel/index.php#hero-section">Home</a></li>
+            <li><a href="http://localhost/hotel/index.php#services">Services</a></li>
+            <li><a href="http://localhost/hotel/index.php#rooms">Rooms</a></li>
+            <li><a href="http://localhost/hotel/index.php#contacts">Contacts</a></li>
+            <input type="submit" name="booknow" value="Book Now">
+        </ul>
+    </nav>
+</header> 
+    </form>
+    <!-- Main Page section -->
+    <section id="hero-section">
+            <div class="text">
+                <h1>Welcome to Goodwill Hotel<br>"Where Serenity Meets <b>Exceptional Service.</b>"</h1>
+                <p>Experience Peaceful Comfort and Personalized Service in Our Exclusive Retreat at Goodwill Hotel.</p>
+            </div>  
+            <div class="searchform">
+                <!-- Needs to be connected to DB to see available Rooms -->
+                <h2>Check Room For Availability</h2>
+                <form action="http://localhost/hotel/index.php" method="POST">
+                    <div>
+                        <span>
+                            <label>Room Type</label>
+                            <select name="room_type" id="roomtypes">
+                                <option value="Deluxe">Deluxe</option>
+                                <option value="Executive">Executive</option>
+                                <option value="Royal Suites">Royal Suites</option>
+                            </select>
+                        </span>
+                        <span>
+                            <label>Check-In</label>
+                            <input type="date" name="check_in" required="">
+                        </span>
+                        <span>
+                            <label>Check-Out</label>
+                            <input type="date" name="check_out" required="">
+                        </span>
+                        <input class="search" type="submit" name="search" value="Search">
+                    </div>
+                </form>
+                <div id="results">
+                    <!-- for dipslaying the search results-->
+                    <!-- Results will be displayed here -->
+                    <div class="results"><h3>Available Rooms</h3><br>Room Number: 101<br>Room Number: 102<br><div>                </div>
+            </div>
+    </div></div></section>
+     <!-- Services Section -->
+     <section id="services">
+        <h2>Quality Services</h2>
+        <div class="mainbox">
+            <div class="box">
+                <div>
+                    <img src="./Goodwill Hotel_files/clean.svg" alt="">
+                </div>
+                <h2>Clean Rooms</h2>
+            </div>
+            <div class="box">
+                <div>
+                <img src="./Goodwill Hotel_files/safe.svg" alt="">
+                </div>
+                <h2>24/7 protection</h2>
+            </div>
+            <div class="box">
+                <div>
+                <img src="./Goodwill Hotel_files/comfort.svg" alt="">
+                </div>
+                <h2>Comfortable</h2>
+            </div>
+        </div>
+    </section>
+    <!-- Section for showcasing roomss -->
+    <section id="rooms">
+        <h2>Types of Room Available</h2>
+        <div class="room-container">
+        <div class="type type1-room">
+            <div class="room-image">
+                <img class="room1" src="./Goodwill Hotel_files/deluxe.jpg" alt="">
+            </div>
+            <div class="text-block">
+                <h1>Deluxe Room</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut saepe dolorum, eligendi nobis, natus blanditiis debitis atque laudantium, iste tempore iusto quae tenetur ipsum facere!</p>
+                <h2>Price: 10000</h2>
+            </div>
+        </div>
+        <div class="type type2-room">
+            <div class="room-image">
+                <img class="room1" src="./Goodwill Hotel_files/exec.jpg" alt="">
+            </div>
+            <div class="text-block">
+                <h1>Executive Room</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut saepe dolorum, eligendi nobis, natus blanditiis debitis atque laudantium, iste tempore iusto quae tenetur ipsum facere!</p>
+                <h2>Price: 20000</h2>
+            </div>
+        </div>
+        <div class="type type3-room">
+            <div class="room-image">
+                <img class="room1" src="./Goodwill Hotel_files/royal.jpg" alt="">
+            </div>
+            <div class="text-block">
+                <h1>Royal Suite Room</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut saepe dolorum, eligendi nobis, natus blanditiis debitis atque laudantium, iste tempore iusto quae tenetur ipsum facere!</p>
+                <h2>Price: 30000</h2>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="contacts">
+        <div class="contactcontainer">
+            <div>
+                <img src="./Goodwill Hotel_files/location.png" alt="image of map">
+            </div>
+            <div class="contactinfo">
+                <h2>Eulogio Rodriguez Jr. Ave</h2>
+                <h2>Philippines, Ortigas</h2>
+
+                <p>Contact Front Desk: +81 3 67127470<br>
+                Email: reservations.goodwill@htl.com</p>
+                <p>Check in: 2:00 PM | Check out: 10:00 AM
+                  <br> *Minimum check in age is 18</p>
+
+                <h2>Get in touch with us.</h2>
+            </div>
+        </div>
+    </section>
+    <footer>
+    © 2024 Goodwill Hotel by IBSGTECH. All rights reserved.
+</footer> 
+
+
+</body></html>

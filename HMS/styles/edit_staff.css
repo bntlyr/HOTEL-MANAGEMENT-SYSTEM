@@ -1,0 +1,163 @@
+.container {
+    margin-left: 350px;
+    max-width: 1000px;
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+.header-registration{
+    border-bottom: 1px solid #e1dddd;
+
+}
+body {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336;
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    z-index: 9999;
+    cursor:pointer;
+}
+
+.container header {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.container .form {
+    margin-top: 60px;
+}
+
+.form .input-box{
+    width:100%;
+    margin-top:20px;
+}
+.form .with-label{
+    width:100%;
+    margin-top:20px;
+}
+.form .gender-box{
+    width:100%;
+    margin-top:20px;
+}
+
+.form :where(.gender-option, .gender){
+    margin-top:10px;
+    display:flex;
+    align-items:center;
+    column-gap: 20px;
+}
+
+.form .gender{
+    column-gap: 5px;
+    cursor: pointer;
+    color: #707070;
+
+}
+
+.input-box label,
+.gender-box label,
+.select-box label {
+    color: #333;
+}
+
+
+.form .gender-box{
+    margin-top:20px;
+    
+}
+
+.form :where(.input-box input, .select-box select ){
+    height:50px;
+    width:100%;
+    outline:none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+    color: #707070;
+    margin-top:8px;
+    font-size:1rem;
+    background-color: #ededed;
+}
+.select-box{
+    height: 100%;
+    width:100%;
+    outline:none;
+    border:none;
+    color:#707070;
+    font-size: 1rem;
+}
+.form .column{
+    display:flex;
+    column-gap: 15px;
+}
+
+
+
+.input-box label {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+
+p{
+    text-align:center;
+}
+.country-select-box{
+    width:980px;
+
+}
+@media screen and(max-width: 500px){
+    .form .column{
+        flex-wrap: wrap;
+    }
+}
+
+h3{
+    margin-top:15px;
+}
+
+.form button{
+    height:55px;
+    width:100%;
+    color:white;
+    background-color: #d32f2f;
+    border:none;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top:30px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2 ease;
+}
+
+.form button:hover{
+    background-color: #760e0e;
+
+}
+.form :where(.select-box.with-label select ){
+    height: 50px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+    color:#707070;
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
