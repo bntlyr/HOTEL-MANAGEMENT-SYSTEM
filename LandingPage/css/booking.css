@@ -66,6 +66,7 @@ body {
 .room-type {
     font-size: 1.2rem;
     font-weight: 700;
+    color: wheat;
 }
 
 .room-price  {
@@ -117,4 +118,17 @@ input {
 }
 .submit-btn:hover {
     background-color: #ff2e2e;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336;
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    z-index: 9999;
+    cursor:pointer;
 }

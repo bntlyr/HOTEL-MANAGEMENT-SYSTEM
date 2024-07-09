@@ -110,7 +110,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                                 $stmtInsertPayment = $conn->prepare($insertPaymentQuery);
                                 $stmtInsertPayment->bind_param("issssssss", $bookingID, $paymentMethod, $amount, $cardType, $cardNumber, $expiryDate, $cvv, $gcashAccount, $gcashNumber);
                                 if ($stmtInsertPayment->execute()) {
-                                    $success_message = "Booking confirmed!";
+                                    $success_message = '<div class=popup>
+                                                            Booking confirmed!
+                                                            <span class="closebtn" onclick="this.parentElement.style.display=\'none\';">&times;</span>
+                                                        </div>';
                                 } else {
                                     $error_message = "Error inserting payment details: " . $conn->error;
                                 }
@@ -189,13 +192,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
             // Apply highlight styles based on selected room type
             if (roomType === "Standard") {
-                document.getElementById("standardRoom").style.backgroundColor = "#800f2f"; // Highlight color
+                document.getElementById("standardRoom").style.backgroundColor = "#660000"; // Highlight color
                 document.getElementById("standardRoom").style.boxShadow = "rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;"; // Highlight box-shadow
             } else if (roomType === "Deluxe") {
-                document.getElementById("deluxeRoom").style.backgroundColor = "#800f2f"; // Hrgighlight color
+                document.getElementById("deluxeRoom").style.backgroundColor = "#660000"; // Hrgighlight color
                 document.getElementById("deluxeRoom").style.boxShadow = "rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;"; // Highlight box-shadow
             } else if (roomType === "Suite") {
-                document.getElementById("suiteRoom").style.backgroundColor = "#800f2f"; // Highlight color
+                document.getElementById("suiteRoom").style.backgroundColor = "#660000"; // Highlight color
                 document.getElementById("suiteRoom").style.boxShadow = "rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;"; // Highlight box-shadow
             }
         }
@@ -203,6 +206,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     </script>
     <link rel="stylesheet" href="./css/templates.css">
     <link rel="stylesheet" href="./css/booking.css">
+    <link rel="icon" type="image/x-icon" href="./img/logo.svg">
 </head>
 <body>
     <?php include('./templates/header.php');?>
@@ -274,51 +278,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                 <div class="form-box">
                     <span>
                     <label for="guestFirstName">First Name:</label>
-                    <input type="text" id="guestFirstName" name="guestFirstName" value="<?php echo isset($_POST['guestFirstName']) ? $_POST['guestFirstName'] : ''; ?>" required><br><br>
+                    <input placeholder="Enter First Name" type="text" id="guestFirstName" name="guestFirstName" value="<?php echo isset($_POST['guestFirstName']) ? $_POST['guestFirstName'] : ''; ?>" required><br><br>
                     </span>
                     <span>
                     <label for="guestLastName">Last Name:</label>
-                    <input type="text" id="guestLastName" name="guestLastName" value="<?php echo isset($_POST['guestLastName']) ? $_POST['guestLastName'] : ''; ?>" required><br><br>
+                    <input placeholder="Enter Last Name" type="text" id="guestLastName" name="guestLastName" value="<?php echo isset($_POST['guestLastName']) ? $_POST['guestLastName'] : ''; ?>" required><br><br>
                     </span>
                 </div>
                 <div class="form-box">
                     <span>
                     <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" value="<?php echo isset($_POST['address']) ? $_POST['address'] : ''; ?>"><br><br>
+                    <input placeholder="Enter Your Address" type="text" id="address" name="address" value="<?php echo isset($_POST['address']) ? $_POST['address'] : ''; ?>"><br><br>
                     </span>
                 </div>
                 <div class="form-box">
                     <span>
                     <label for="city">City:</label>
-                    <input type="text" id="city" name="city" value="<?php echo isset($_POST['city']) ? $_POST['city'] : ''; ?>"><br><br>
+                    <input placeholder="Enter City" type="text" id="city" name="city" value="<?php echo isset($_POST['city']) ? $_POST['city'] : ''; ?>"><br><br>
                     </span>
                     <span>
                     <label for="state">State:</label>
-                    <input type="text" id="state" name="state" value="<?php echo isset($_POST['state']) ? $_POST['state'] : ''; ?>"><br><br>
+                    <input placeholder="Enter State" type="text" id="state" name="state" value="<?php echo isset($_POST['state']) ? $_POST['state'] : ''; ?>"><br><br>
                     </span>
                     <span>
                     <label for="zipCode">Zip Code:</label>
-                    <input type="text" id="zipCode" name="zipCode" value="<?php echo isset($_POST['zipCode']) ? $_POST['zipCode'] : ''; ?>"><br><br>
+                    <input  placeholder="Enter Zip Code" type="text" id="zipCode" name="zipCode" value="<?php echo isset($_POST['zipCode']) ? $_POST['zipCode'] : ''; ?>"><br><br>
                     </span>
                 </div>  
                 <div class="form-box">
                     <span>
                     <label for="country">Country:</label>
-                    <input type="text" id="country" name="country" value="<?php echo isset($_POST['country']) ? $_POST['country'] : ''; ?>"><br><br>
+                    <input placeholder="Enter Country" type="text" id="country" name="country" value="<?php echo isset($_POST['country']) ? $_POST['country'] : ''; ?>"><br><br>
                     </span>
                     <span>
                     <label for="gender">Gender:</label>
-                    <input type="text" id="gender" name="gender" value="<?php echo isset($_POST['gender']) ? $_POST['gender'] : ''; ?>"><br><br>
+                    <input placeholder="Enter Gender" type="text" id="gender" name="gender" value="<?php echo isset($_POST['gender']) ? $_POST['gender'] : ''; ?>"><br><br>
                     </span>
                 </div>
                 <div class="form-box">
                     <span>
                     <label for="emailAddress">Email Address:</label>
-                    <input type="email" id="emailAddress" name="emailAddress" value="<?php echo isset($_POST['emailAddress']) ? $_POST['emailAddress'] : ''; ?>"><br><br>
+                    <input placeholder="Enter Email" type="email" id="emailAddress" name="emailAddress" value="<?php echo isset($_POST['emailAddress']) ? $_POST['emailAddress'] : ''; ?>"><br><br>
                     </span>
                     <span>
                     <label for="phoneNumber">Phone Number:</label>
-                    <input type="text" id="phoneNumber" name="phoneNumber" value="<?php echo isset($_POST['phoneNumber']) ? $_POST['phoneNumber'] : ''; ?>"><br><br>
+                    <input placeholder="Enter Phone Number" type="text" id="phoneNumber" name="phoneNumber" value="<?php echo isset($_POST['phoneNumber']) ? $_POST['phoneNumber'] : ''; ?>"><br><br>
                     </span>
                 </div>
                 <hr>
@@ -337,24 +341,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
             <div class ="form-box">
                 <span>
                 <label for="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" name="cardNumber"><br><br>
+                <input placeholder="Enter Card Number" type="text" id="cardNumber" name="cardNumber"><br><br>
                 </span>
             </div>
 
             <div class ="form-box">
                 <span>
                 <label for="cardType">Card Type:</label>
-                <input type="text" id="cardType" name="cardType"><br><br>
+                <input  placeholder="Enter Card Type" type="text" id="cardType" name="cardType"><br><br>
                 </span>
 
                 <span>
                 <label for="expiryDate">Expiry Date:</label>
-                <input type="text" id="expiryDate" name="expiryDate"><br><br>
+                <input placeholder="Enter Expiry" type="text" id="expiryDate" name="expiryDate"><br><br>
                 </span>
                 
                 <span>
                 <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv"><br><br>
+                <input placeholder="Enter CVV" type="text" id="cvv" name="cvv"><br><br>
                 </span>
             </div>
         </div>
@@ -362,21 +366,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
             <div class ="form-box">
                 <span>
                 <label for="gcashAccount">GCash Account:</label>
-                <input type="text" id="gcashAccount" name="gcashAccount"><br><br>
+                <input placeholder="Enter Account Name" type="text" id="gcashAccount" name="gcashAccount"><br><br>
                 </span>
             </div>
             
             <div class ="form-box">
             <span>
             <label for="gcashNumber">GCash Number:</label>
-            <input type="text" id="gcashNumber" name="gcashNumber"><br><br>
+            <input placeholder="Enter 9-Digit Account Number" type="text" id="gcashNumber" name="gcashNumber"><br><br>
             </span>
             </div>
         </div>
         <div class ="form-box">
             <span>
             <label for="amount">Amount:</label>
-            <input type="text" id="amount" name="amount" required><br><br>
+            <input placeholder="Enter Amount" type="text" id="amount" name="amount" required><br><br>
             </span>
         </div>
         <input class="submit-btn" type="submit" name="submit" value="Book Now">

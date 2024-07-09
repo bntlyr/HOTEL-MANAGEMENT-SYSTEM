@@ -6,11 +6,12 @@
     <title>Welcome to Goodwill Hotel</title>
     <link rel="stylesheet" href="./css/style.css"> <!-- Link to your external CSS file -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animation.css">
 </head>
 <body>
     <section id="hero-section" class="hero">
         <div class="text">
-            <h1>Welcome to Goodwill Hotel<br>"Where Serenity Meets <b>Exceptional Service.</b>"</h1>
+            <h1><h class="animate">Welcome to Goodwill Hotel!</h><br>"Where Serenity Meets <b>Exceptional Service.</b>"</h1>
             <p>Experience Peaceful Comfort and Personalized Service in Our Exclusive Retreat at Goodwill Hotel.</p>
         </div>  
         <div class="searchform">

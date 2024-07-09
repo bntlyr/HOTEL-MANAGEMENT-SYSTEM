@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goodwill Hotel</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.svg">
     <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/templates.css">

@@ -30,8 +30,8 @@ $result = mysqli_query($conn, $query);
         <h2 class="staffs">Staff List 
             <span>
                 <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Search by room number...">
-                    <button onclick="searchRoom()" class="btn"><i class="fas fa-search"></i></button>
+                    <input type="text" id="searchInput" placeholder="Search by name...">
+                    <button onclick="searchStaff()" class="btn"><i class="fas fa-search"></i></button>
                 </div> 
                 <a href="index.php?page=add_staff" class="btn add-btn"><i class="fas fa-plus"></i> Add New Staff</a>
             </span>
