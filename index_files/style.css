@@ -73,7 +73,7 @@ li,a {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    background: url("../img/hotel-bg.jpg"); 
+    background: url("./index_files/hotel-bg.jpg"); 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
