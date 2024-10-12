@@ -1,5 +1,0 @@
-Database name: hotel_management
-
-
-username: admin
-password: goodwill69
