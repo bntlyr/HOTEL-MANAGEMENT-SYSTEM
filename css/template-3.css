@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --clr--font: #ffffff;
+    --clr--header--bg: #1e1d1d;
+    --clr--primary--2: #1e1d1d;
+    --clr-accent: #ff2e2e;
+    --clr-primary: #ce2121;
+    --ff-primary: "Poppins", sans-serif;
+    --ff-hero: "Work Sans", sans-serif;
+}
+
+.formbold-main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 90vh; /* Full screen height */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+.formbold-form-wrapper {
+    width: 60%;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.head-1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #07074d;
+    text-align: center;
+    font-family: var(--ff-primary);
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.formbold-form-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    color: #6b7280;
+    outline: none;
+}
+
+.formbold-form-input:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.form-row {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+
+.form-row label {
+    flex: 1;
+    font-weight: 600;
+    color: #07074d;
+    font-family: var(--ff-primary);
+}
+
+.form-row span input {
+    flex: 1;
+    font-family: var(--ff-primary); 
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-row select {
+    width: 100%;
+    height: 39px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.payment-options {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment-options label {
+
+    font-weight: 600;
+    color: #07074d;
+    text-align: left;
+}
+
+.payment-options div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.formbold-form-label {
+    font-family: var(--ff-primary);
+}
+
+
+.submit-btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+    background-color: #ce2121;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff2e2e;
+}

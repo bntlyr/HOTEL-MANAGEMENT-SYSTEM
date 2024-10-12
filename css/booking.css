@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --clr--font: #ffffff;
+    --clr--header--bg: #1e1d1d;
+    --clr--primary--2: #1e1d1d;
+    --clr--accent: #ff2e2e;
+    --clr--primary: #ce2121;
+    --ff--primary: "Poppins", sans-serif;
+    --ff-hero: "Work Sans", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:var(--ff--primary);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 60%;
+    padding: 3rem 5rem;
+}
+
+/* images */
+.wrapper-box { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 0 2rem 0;
+}
+
+.room-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1d1d;
+    padding: 1rem 1rem 2rem 1rem;
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.room-box img {
+    min-width: 220px;
+    width: 100%;
+}
+
+.room-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    width: 100%;
+    gap: 0.25rem;
+}
+
+.room-type {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: wheat;
+}
+
+.room-price  {
+    font-weight: 500;
+}
+hr {
+    width: 100%;
+}
+
+.header2 {
+    text-align: center;
+}
+
+.form-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-box > * {
+    flex: 1 1;
+}
+
+h2 {
+    color: #1e1d1d;
+    font-family:var(--ff--primary);
+}
+
+
+select {
+    width: 101%;
+    height: 40px;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+}
+
+.submit-btn {
+    width: 101%;
+    background-color: #ce2121;
+    border: 1px none;
+    color: #eeeeee;
+    border: 0.1px solid #1e1d1d;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 0.4s;
+}
+.submit-btn:hover {
+    background-color: #ff2e2e;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336;
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    z-index: 9999;
+    cursor:pointer;
+}

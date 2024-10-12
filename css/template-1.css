@@ -1,0 +1,229 @@
+:root {
+    --clr--font: #ffffff;
+    --clr--header--bg: #1e1d1d;
+    --clr--primary--2: #1e1d1d;
+    --clr--accent: #ff2e2e;
+    --clr--primary: #ce2121;
+    --ff--primary: "Poppins", sans-serif;
+    --ff-hero: "Work Sans", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: var(--ff--primary);
+}
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    padding: 0rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr--font);
+    z-index: 1000;
+    background-color: var(--clr--header--bg);   
+}
+
+header .logo img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+header .navbar ul {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    list-style: none;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    color: var(--clr--font);
+    font-size: 0.9rem;
+}
+
+header .navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+header .navbar ul input {
+    font-family: var(--ff--primary);
+    color: var(--clr--font);
+    background-color: var(--clr--primary);
+    transition: 0.4s;
+    border: 0.1px solid #303841;
+    width: 140px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+header .navbar ul input:hover {
+    background-color: var(--clr--accent);
+}
+
+footer {
+    font-family: var(--ff--primary);
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1d1d;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.head-1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.divider {
+    width: 80%;
+    margin: 20px auto;
+    border-bottom: 2px solid grey;
+}
+
+.rooms-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.room-box {
+    width: 100%;
+    max-width: 300px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.room-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Limit the height of images */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.room-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.room-type {
+    font-size: 20px;
+    font-weight: bold;
+    color: #07074d;
+}
+
+.room-desc {
+    font-size: 14px;
+    font-weight: 400;
+    color: #07074d;
+    margin: 10px 0;
+}
+
+.room-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #07074d;
+    margin: 10px 0;
+}
+
+.book-btn {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+    background-color: #ce2121;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.book-btn:hover {
+    background-color: #ff2e2e;
+}
+
+.book-btn, .submit-btn {
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    font-weight: 600;
+    background-color: #ce2121;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.book-btn:hover, .submit-btn:hover {
+    background-color: #ff2e2e;
+}
+
+.room-detail-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    margin-top: 100px;
+    max-width: 800px;
+}
+
+.room-detail-box img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.room-info {
+    flex: 1;
+}
+
+.date-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.date-selection label {
+    font-weight: 600;
+    color: #07074d;
+}
+
+.date-selection input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
