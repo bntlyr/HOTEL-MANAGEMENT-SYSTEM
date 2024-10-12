@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://localhost/PROJECTS/TEST/GoodWill/LandingPage/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodwill Hotel</title>
+    <link rel="icon" type="image/x-icon" href="./index_files/logo.svg">
+    <link rel="shortcut icon" href="http://localhost/LandingPage/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./index_files/style.css">
+    <link rel="stylesheet" href="./index_files/templates.css">
+    <link rel="stylesheet" href="./index_files/all.min.css" integrity="sha512-J2Sp4s4stwrbI8Rg+Rv5ZgDlDxV0cpFk1MPXeha4Wf8t3NUF7/1rCD2nF7DoCf/l0h7p1PPTd79MDcdJwHK3Nw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style></head>
+<body onload="restrictDate();"> 
+    <!-- Navbar -->
+    <form action="http://localhost/LandingPage/booking.php" method="post">   
+    <header>
+        <div class="logo">
+            <a href="http://localhost/LandingPage/index.php"><img src="./index_files/logo.svg" alt="site logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="http://localhost/LandingPage/index.php">Home</a></li>
+                <li><a href="http://localhost/LandingPage/index.php#services">Services</a></li>
+                <li><a href="http://localhost/LandingPage/index.php#rooms">Rooms</a></li>
+                <li><a href="http://localhost/LandingPage/index.php#contacts">Contacts</a></li>
+                <input type="submit" name="booknow" value="Book Now">
+            </ul>
+        </nav>
+    </header>
+</form>    
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Goodwill Hotel</title>
+    <link rel="stylesheet" href="./index_files/style.css"> <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="./index_files/style.css">
+    <link rel="stylesheet" href="./index_files/animation.css">
+    <script>
+        // Function to restrict date input to future dates
+        function restrictDate() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById("checkin").setAttribute("min", today);
+            document.getElementById("checkout").setAttribute("min", today);
+        }
+    </script>
+
+<!-- remove onload to be able to book past -->
+
+    <section id="hero-section" class="hero">
+        <div class="text">
+            <h1><h class="animate">Welcome to Goodwill Hotel!</h><br>"Where Serenity Meets <b>Exceptional Service.</b>"</h1>
+            <p>Experience Peaceful Comfort and Personalized Service in Our Exclusive Retreat at Goodwill Hotel.</p>
+        </div>  
+        <div class="searchform">
+            <h2>Check Room For Availability</h2>
+            <form action="http://localhost/LandingPage/index.php" method="POST">
+                <div>
+                    <span>
+                        <label>Room Type</label>
+                        <select name="room_type" id="roomtypes">
+                            <option value="None">--Select Type--</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Deluxe">Deluxe</option>
+                            <option value="Suite">Suite</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label>Check-In</label>
+                        <input id="checkin" type="date" name="check_in" required="" min="2024-10-12">
+                    </span>
+                    <span>
+                        <label>Check-Out</label>
+                        <input id="checkin" type="date" name="check_out" required="">
+                    </span>
+                    <input class="search" type="submit" name="search" value="Search">
+                </div>
+            </form>
+            <div id="results">
+                    </div>
+    </div>
+</section><!-- Services Section -->
+<section id="services">
+        <h2>Quality Services</h2>
+        <div class="mainbox">
+            <div class="box">
+                <div>
+                    <img src="./index_files/clean.svg" alt="">
+                </div>
+                <h2>Clean Rooms</h2>
+            </div>
+            <div class="box">
+                <div>
+                <img src="./index_files/safe.svg" alt="">
+                </div>
+                <h2>24/7 protection</h2>
+            </div>
+            <div class="box">
+                <div>
+                <img src="./index_files/comfort.svg" alt="">
+                </div>
+                <h2>Comfortable</h2>
+            </div>
+        </div>
+    </section><!-- Section for showcasing rooms -->
+<section id="rooms">
+    <h2>Types of Room Available</h2>
+    <div class="room-container">
+        <div class="type type1-room">
+            <div class="room-image">
+                <img class="room1" src="./index_files/deluxe.jpg" alt="Standard Room Image">
+            </div>
+            <div class="text-block">
+                <h1>Standard Room</h1>
+                <p>Our Standard Rooms offer a comfortable and affordable stay with essential amenities. Each room features a cozy bed, a flat-screen TV, free Wi-Fi, and a private bathroom with complimentary toiletries. Ideal for solo travelers or couples looking for a simple yet pleasant accommodation experience.</p>
+                <h2>Price: ₱10,000.00</h2>
+            </div>
+        </div>
+        <div class="type type2-room">
+            <div class="room-image">
+                <img class="room1" src="./index_files/exec.jpg" alt="Deluxe Room Image">
+            </div>
+            <div class="text-block">
+                <h1>Deluxe Room</h1>
+                <p>Experience luxury and comfort in our Deluxe Rooms. These rooms are more spacious and come with enhanced amenities such as a king-sized bed, a mini-fridge, a work desk, and a seating area. Enjoy a relaxing stay with premium bedding, a larger flat-screen TV, and a well-appointed bathroom with upscale toiletries.</p>
+                <h2>Price: ₱20,000.00</h2>
+            </div>
+        </div>
+        <div class="type type3-room">
+            <div class="room-image">
+                <img class="room1" src="./index_files/royal.jpg" alt="Suite Room Image">
+            </div>
+            <div class="text-block">
+                <h1>Suite Room</h1>
+                <p>Indulge in the ultimate luxury with our Suite Rooms. These exclusive rooms offer the finest accommodations with separate living and sleeping areas, a large bathroom with a jacuzzi, and a private balcony with stunning views. Perfect for those seeking a lavish stay, our Suite Rooms also include complimentary breakfast, a mini-bar, and personalized services to ensure a memorable experience.</p>
+                <h2>Price: ₱30,000.00</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contacts">
+        <div class="contactcontainer">
+            <div>
+                <img src="./index_files/location.png" alt="image of map">
+            </div>
+            <div class="contactinfo">
+                <h2>Eulogio Rodriguez Jr. Ave</h2>
+                <h2>Philippines, Ortigas</h2>
+
+                <p>Contact Front Desk: +81 3 67127470<br>
+                Email: reservations.goodwill@htl.com</p>
+                <p>Check in: 2:00 PM | Check out: 10:00 AM
+                  <br> *Minimum check in age is 18</p>
+
+                <h2>Get in touch with us.</h2>
+            </div>
+        </div>
+</section>    <!-- Footer -->
+    <footer>
+    © 2024 Goodwill Hotel by IBSGTECH. All rights reserved.
+</footer> 
+
+
+</body></html>

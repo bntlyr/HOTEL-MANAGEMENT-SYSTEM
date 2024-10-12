@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --clr--font: #ffffff;
+    --clr--header--bg: #1e1d1d;
+    --clr--primary--2: #1e1d1d;
+    --clr--accent: #ff2e2e;
+    --clr--primary: #ce2121;
+    --ff--primary: "Poppins", sans-serif;
+    --ff-hero: "Work Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Header Styling */
+header {
+    padding: 0rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr--font);
+    z-index: 1000;
+    font-family: var(--ff--primary);
+    background-color: var(--clr--header--bg);   
+}
+header .logo,img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+header .navbar,ul {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.navbar ul 
+li,a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--clr--font);
+    font-size: 0.9rem;
+}
+.navbar ul a:hover {
+    text-decoration: underline;
+    list-style: none;
+    color: var(--clr--font);
+}
+.navbar ul input {
+    font-family: var(--ff--primary);
+    color: var(--clr--font);
+    background-color: var(--clr--primary);
+    transition: 0.4s;
+    border: 0.1px solid #303841;
+    width: 140px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.navbar ul input:hover {
+    font-family: var(--ff--primary);
+    background-color: var(--clr--accent);
+    width: 140px;
+    height: 40px;
+}
+
+footer {
+    font-family: var(--ff--primary);
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1d1d;
+    color: white;
+    position: relative;
+    bottom: 0;
+}
